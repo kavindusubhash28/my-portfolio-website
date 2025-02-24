@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/450ea7751a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">  
+    <div class="container">
+        <nav>
+          <img src = "images/logo.png" class="logo"> 
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Undergraduate</p>
+            <h1>Hi,I'm <span>Kavindu</span><br> Subhash From SriLanka</h1>
+        </div>
+    </div>
+
+</div>
+<!---------about------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" class="about-img" alt="about me" >
+            </div>
+            <div class="about-col-2">
+                <h1>About Me</h1>
+                <p>Hi, I'm Kavindu Subhash Rajapaksha, a Computer Science undergraduate at Informatics Institute of Technology (IIT). I'm passionate about web development and enjoy creating modern, user-friendly websites. I constantly explore new technologies to improve my skills and build innovative web solutions. My goal is to become a skilled web developer, delivering high-quality and efficient web applications.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                        <li><span>Web Development</span><br>Website Development</li> 
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <p>Cuurently No experience</p> 
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>GCE O/L</span><br>GCE O/L,Ibbagamuwa Central College(8A,1S)</li>
+                        <li><span>2023-2024</span><br>Foundation Certificate for Higher Education-IT,(IIT University)(Merit Pass)</li>
+                        <li><span>2024-present</span><br>BSc(Hons)Computer Science,(University of Westminster)</li>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------Projects-------------------------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="images/project1.jpg" >
+                <div class="layer">
+                    <h3>Portfolio Website</h3>
+                    <p>My portfolio website serves as a hub for my web development projects, skills, and future career growth in front-end and full-stack development.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/project2.jpg" >
+                <div class="layer">
+                    <h3>Mobile App UI Design-[Pet Care]</h3>
+                    <p>I designed a sleek and user-friendly mobile app UI using Figma, focusing on intuitive navigation and modern aesthetics.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/project3.jpg" >
+                <div class="layer">
+                    <h3>Healthy Living Website</h3>
+                    <p>I designed a website promoting **Good Health and Well-being**, featuring resources on nutrition, fitness, and mental health, with a clean and user-friendly layout.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!----------Contact-------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>kavindurajapaksha11@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+94768914956</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/share/1BQTk5LnDC/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kavindu__subhash?igsh=czgyYXlwb3JsbnR0&utm_source=qr"><i class="fa-brands fa-instagram"></i></i></a>
+                    <a href="https://www.linkedin.com/in/kavindu-rajapaksha-982943293/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email"  required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p><i class="fa-solid fa-heart"></i>Copyright 2025 @kavindu subhash. All rights Reserved. </p>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+    for (let tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (let tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    document.getElementById(tabname).classList.add("active-tab");
+    event.currentTarget.classList.add("active-link");
+
+}
+
+</script>
+  
+</body>
+</html>
